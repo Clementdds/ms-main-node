@@ -75,8 +75,8 @@ html(lang='en')
                 btn.onclick = function() {
                     btn.classList.add('disabled');
                     sendFor('/computation', {
-                        a: (document.getElementById('compute_a').value || ''),
-                        b: (document.getElementById('compute_b').value || ''),
+                        a: Number((document.getElementById('compute_a').value || '')),
+                        b: Number((document.getElementById('compute_b').value || '')),
                     }, function(err, data) {
                         if (err) {
                             console.error(err);
